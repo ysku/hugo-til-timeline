@@ -1,8 +1,8 @@
 {{ define "content" }}
-<article class="media">
+<article class="media" style="margin-bottom: 2rem;">
   <figure class="media-left">
     {{ if .Site.Params.Avatar }}
-    <figure class="image is-128x128">
+    <figure class="image is-96x96">
       <img class="is-rounded" src="{{ .Site.Params.Avatar | absURL }}" alt="{{ .Site.Params.Author }}">
     </figure>
     {{ end }}
