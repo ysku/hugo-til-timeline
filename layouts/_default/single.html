@@ -1,5 +1,5 @@
 {{ define "content" }}
-<div class="container">
+<div class="container" style="margin-bottom: 3rem;">
   <a class="text-lg mb-8 inline-block" href="{{ .Site.BaseURL | relLangURL }}">&larr; {{ i18n "back_home" }}</a>
 
   <!-- Title and Publication Date -->
@@ -15,7 +15,7 @@
   </div>
   {{ end }}
 </div>
-<div class="markdown-body">
+<div class="container markdown-body">
   {{ .Content }}
 </div>
 {{ end }}
