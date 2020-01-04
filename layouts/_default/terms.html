@@ -1,0 +1,28 @@
+<h2 class="title">{{ .Title }}</h2>
+{{ if eq .Title "Tags"}}
+  {{ if lt 0 (len .Site.Taxonomies.tags) }}
+  <div class="field is-grouped is-grouped-multiline">
+    {{ range .Site.Taxonomies.tags.ByCount }}
+    <div class="control">
+      <div class="tags has-addons">
+        <a class="tag" href="{{ $.Site.BaseURL | relURL }}tags/{{ .Name | urlize }}">{{ .Name }}</a>
+        <span class="tag">({{ .Count }})</span>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+  {{ else if eq .Title "Categories"}}
+  {{ if lt 0 (len .Site.Taxonomies.categories) }}
+  <div class="field is-grouped is-grouped-multiline">
+    {{ range .Site.Taxonomies.categories.ByCount }}
+    <div class="control">
+      <div class="tags has-addons">
+        <a class="tag" href="{{ $.Site.BaseURL | relURL }}categories/{{ .Name | urlize }}">{{ .Name }}</a>
+        <span class="tag">({{ .Count }})</span>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+{{ end }}
