@@ -10,7 +10,7 @@
 {{ end }}
 
 {{ define "content" }}
-<section class="mb-24">
+<section class="section">
   {{ range site.RegularPages.GroupByDate "2006" -}}
   {{ partial "posts.html" . }}
   {{ end }}
