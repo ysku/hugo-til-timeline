@@ -1,0 +1,19 @@
+{
+  "name": "hugo-til-timeline",
+  "version": "1.0.0",
+  "description": "hugo theme for til in timeline format",
+  "main": "sass/theme.scss",
+  "repository": "git@github.com:ysku/hugo-til-timeline.git",
+  "author": "ysku <yusuke1581@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url sass/theme.scss static/css/theme.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "devDependencies": {
+    "bulma": "^0.8.0",
+    "cross-env": "^6.0.3",
+    "node-sass": "^4.13.0"
+  }
+}
