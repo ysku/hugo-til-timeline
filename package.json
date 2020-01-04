@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "bulma": "^0.8.0",
+    "bulma-timeline": "^3.0.4",
     "node-sass": "^4.13.0"
   }
 }

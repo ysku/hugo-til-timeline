@@ -1,13 +1,14 @@
-<div class="container">
-  <div class="menu">
-    <h2 class="title is-2 menu-label">{{ .Key }}</h2>
-    <ul class="menu-list">
-      {{ range .Pages -}}
-      <li>
-        <time datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "Jan 02"}}</time>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </li>
-      {{- end }}
-    </ul>
+<div class="timeline">
+  <header class="timeline-header">
+    <span class="tag is-medium is-primary">{{ .Key }}</span>
+  </header>
+  {{ range .Pages -}}
+  <div class="timeline-item">
+    <div class="timeline-marker"></div>
+    <div class="timeline-content">
+      <p class="heading">{{ .Date.Format "Jan 02"}}</p>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </div>
   </div>
+  {{- end }}
 </div>
