@@ -1,24 +1,26 @@
 {{ define "content" }}
-<article class="media" style="margin-bottom: 2rem;">
-  <figure class="media-left">
-    {{ if .Site.Params.Avatar }}
-    <figure class="image is-96x96">
-      <img class="is-rounded" src="{{ .Site.Params.Avatar | absURL }}" alt="{{ .Site.Params.Author }}">
+<div class="container">
+  <article class="media" style="margin-bottom: 2rem;">
+    <figure class="media-left">
+      {{ if .Site.Params.Avatar }}
+      <figure class="image is-96x96">
+        <img class="is-rounded" src="{{ .Site.Params.Avatar | absURL }}" alt="{{ .Site.Params.Author }}">
+      </figure>
+      {{ end }}
     </figure>
-    {{ end }}
-  </figure>
-  <div class="media-content">
-    <h1 class="title">{{ .Site.Title }}</h1>
-    {{ if .Site.Params.GithubURL }}
-    <a class="button is-small" src="{{ .Site.Params.GithubURL | absURL }}">
-      <span class="icon is-small">
-        <i class="fab fa-github"></i>
-      </span>
-      <span>GitHub</span>
-    </a>
-    {{ end }}
-  </div>
-</article>
+    <div class="media-content">
+      <h1 class="title">{{ .Site.Title }}</h1>
+      {{ if .Site.Params.GithubURL }}
+      <a class="button is-small" src="{{ .Site.Params.GithubURL | absURL }}">
+        <span class="icon is-small">
+          <i class="fab fa-github"></i>
+        </span>
+        <span>GitHub</span>
+      </a>
+      {{ end }}
+    </div>
+  </article>
+</div>
 <div class="container">
   {{ range site.RegularPages.GroupByDate "2006" -}}
   {{ partial "posts.html" . }}
