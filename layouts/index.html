@@ -1,4 +1,4 @@
-{{ define "heading" }}
+{{ define "content" }}
 <article class="media">
   <figure class="media-left">
     {{ if .Site.Params.Avatar }}
@@ -19,9 +19,6 @@
     {{ end }}
   </div>
 </article>
-{{ end }}
-
-{{ define "content" }}
 <div class="container">
   {{ range site.RegularPages.GroupByDate "2006" -}}
   {{ partial "posts.html" . }}

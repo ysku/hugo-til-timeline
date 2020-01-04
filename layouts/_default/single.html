@@ -1,4 +1,4 @@
-{{ define "heading" }}
+{{ define "content" }}
 <div class="container">
   <a class="text-lg mb-8 inline-block" href="{{ .Site.BaseURL | relLangURL }}">&larr; {{ i18n "back_home" }}</a>
 
@@ -15,9 +15,6 @@
   </div>
   {{ end }}
 </div>
-{{ end }}
-
-{{ define "content" }}
 <div class="markdown-body">
   {{ .Content }}
 </div>
