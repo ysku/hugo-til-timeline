@@ -1,0 +1,9 @@
+name = "TIL Timeline"
+license = "MIT"
+licenselink = "https://github.com/ysku/hugo-til-timeline/blob/master/LICENSE"
+tags = [ "blog" ]
+features = []
+min_version = "0.54.0"
+
+[author]
+  name = "ysku"
